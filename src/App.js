@@ -50,7 +50,7 @@
 // export default App
 
 import Axios from "axios";
-import { React, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const App = () => {
 
@@ -61,7 +61,7 @@ const getProducts = async () => {
     const data = await Axios.get('./netlify/functions/products');
     setProducts(data);
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
@@ -76,6 +76,6 @@ useEffect(() => {
     OysterSpores.com
     </>
   )
-}
+};
 
 export default App;
