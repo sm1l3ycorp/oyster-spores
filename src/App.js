@@ -66,7 +66,7 @@ const getProducts = async () => {
 }
 
 useEffect(() => {
-  if (!products) {
+  if (products.length === 0) {
     getProducts();
   }
 },[products])
