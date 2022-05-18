@@ -1,80 +1,46 @@
-// import React, { Component } from "react"
-// import logo from "./logo.svg"
-// import "./App.css"
-
-// class LambdaDemo extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = { loading: false, msg: null }
-//   }
-
-//   handleClick = api => e => {
-//     e.preventDefault()
-
-//     this.setState({ loading: true })
-//     fetch("/.netlify/functions/" + api)
-//       .then(response => response.json())
-//       .then(json => this.setState({ loading: false, msg: json.msg }))
-//   }
-
-//   render() {
-//     const { loading, msg } = this.state
-
-//     return (
-//       <p>
-//         <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-//         <button onClick={this.handleClick("products")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-//         <br />
-//         <span>{msg}</span>
-//       </p>
-//     )
-//   }
-// }
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <p>
-//             Edit <code>src/App.js</code> and save to reload.
-//           </p>
-//           <LambdaDemo />
-//         </header>
-//       </div>
-//     )
-//   }
-// }
-
-// export default App
-
 import Axios from "axios";
 import React, { useState, useEffect } from "react";
+import Header from "./Components/Header/Header";
+import PromoBanner from "./Components/PromoBanner/PromoBanner";
+import Products from "./Components/Products/Products";
+import styled from "styled-components";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-flow: column;
+  background-color: #f8f8ff;
+  min-height: 100vh;
+  min-width: 100vh;
+  flex-direction: column;
+`
 
 const App = () => {
 
 const [products, setProducts] = useState([]);
 
-const getProducts = async () => {
-  try {
-    const data = await Axios.get('./netlify/functions/products');
-    setProducts(data);
-  } catch (err) {
-    console.log(err);
-  }
-}
+// const getProducts = async () => {
+//   try {
+//     const data = await Axios.get('.netlify/functions/products');
+//     console.log(data.data[0])
+//     setProducts(data.data[0]);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
 
-useEffect(() => {
-  if (products.length === 0) {
-    getProducts();
-  }
-},[products])
+// useEffect(() => {
+//   if (products.length === 0) {
+//     getProducts();
+//   }
+// },[products])
 
   return (
-    <>
-    OysterSpores.com
-    </>
+    <AppContainer>
+    <Header />
+    <PromoBanner />
+    <Products />
+    </AppContainer>
   )
 };
 
