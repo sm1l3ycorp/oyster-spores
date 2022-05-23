@@ -7,7 +7,7 @@ const HeaderContainer = styled.div`
     display: flex;
     width: 100%;
     flex-direction: row;
-    background-color: #f8f8ff
+    background-color: #f8f8ff;
 `
 const Header = () => {
     return (

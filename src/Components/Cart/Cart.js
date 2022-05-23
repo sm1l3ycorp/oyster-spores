@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 const CartContainer = styled.div`
     margin-top: 2rem;
-    margin-left: auto
+    margin-left: auto;
+    padding-right: 1rem;
 `
 
 const CartIconContainer = styled.div`
@@ -22,10 +23,10 @@ const CartIconContainer = styled.div`
 
 const Cart = () => {
     return (
-        <CartContainer>
+        <CartContainer>            
             <CartIconContainer>
-                <Cart3 size={42} style={{marginTop: "2.8rem", marginBottom: "3rem"}} />
-            </CartIconContainer>
+            <Cart3 size={42} style={{marginTop: "2.8rem", marginBottom: "3rem"}} />
+            </CartIconContainer>            
         </CartContainer>
     )
 }

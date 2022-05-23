@@ -13,6 +13,7 @@ const AppContainer = styled.div`
   min-height: 100vh;
   min-width: 100vh;
   flex-direction: column;
+  caret-color: transparent;
 `
 
 const App = () => {
