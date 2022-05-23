@@ -1,5 +1,5 @@
-import Axios from "axios";
-import React, { useState, useEffect } from "react";
+// import Axios from "axios";
+import React from "react";
 import Header from "./Components/Header/Header";
 import PromoBanner from "./Components/PromoBanner/PromoBanner";
 import Products from "./Components/Products/Products";
@@ -18,7 +18,7 @@ const AppContainer = styled.div`
 
 const App = () => {
 
-const [products, setProducts] = useState([]);
+// const [products, setProducts] = useState([]);
 
 // const getProducts = async () => {
 //   try {
