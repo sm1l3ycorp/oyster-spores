@@ -13,8 +13,8 @@ const Products = () => {
     return (
         <ProductsContainer>
             <CardGroup>
-                <Card>
-                    <Card.Img variant="top" src={Prints} />
+                <Card style={{hover: "red"}}>
+                    <Card.Img variant="top" src={Prints} style={{width: "15rem", marginLeft: "auto", marginRight: "auto"}} />
                     <Card.Body>
                     <Card.Title>Card title</Card.Title>
                     <Card.Text>
@@ -22,12 +22,9 @@ const Products = () => {
                         additional content. This content is a little bit longer.
                     </Card.Text>
                     </Card.Body>
-                    <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src={Swabs} />
+                    <Card.Img variant="top" src={Swabs} style={{width: "15rem", marginLeft: "auto", marginRight: "auto"}} />
                     <Card.Body>
                     <Card.Title>Card title</Card.Title>
                     <Card.Text>
@@ -35,12 +32,9 @@ const Products = () => {
                         content.{' '}
                     </Card.Text>
                     </Card.Body>
-                    <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src={Syringes} />
+                    <Card.Img variant="top" src={Syringes} style={{width: "15rem", marginLeft: "auto", marginRight: "auto"}} />
                     <Card.Body>
                     <Card.Title>Card title</Card.Title>
                     <Card.Text>
@@ -49,9 +43,6 @@ const Products = () => {
                         show that equal height action.
                     </Card.Text>
                     </Card.Body>
-                    <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
                 </Card>
         </CardGroup>
         </ProductsContainer>
